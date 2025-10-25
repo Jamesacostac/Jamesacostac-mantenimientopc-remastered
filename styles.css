@@ -121,20 +121,7 @@ nav ul li a:hover:after {
     margin: 0 auto 2rem;
 }
 
-.hero-content .btn {
-    margin: 0 10px;
-}
 
-.btn-secondary-hero {
-    background: var(--secondary);
-    color: white;
-    border: 2px solid var(--secondary);
-}
-
-.btn-secondary-hero:hover {
-    background: var(--primary);
-    border-color: var(--primary);
-}
 
 .btn {
     display: inline-block;
@@ -384,16 +371,7 @@ nav ul li a:hover:after {
     color: var(--primary);
 }
 
-.btn-tutorial-nav-header {
-    background: var(--accent);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
 
-.btn-tutorial-nav-header:hover {
-    background: #c0392b;
-}
 
 .contact-section {
     padding: 5rem 0;
