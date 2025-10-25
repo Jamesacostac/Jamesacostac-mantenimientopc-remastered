@@ -121,6 +121,21 @@ nav ul li a:hover:after {
     margin: 0 auto 2rem;
 }
 
+.hero-content .btn {
+    margin: 0 10px;
+}
+
+.btn-secondary-hero {
+    background: var(--secondary);
+    color: white;
+    border: 2px solid var(--secondary);
+}
+
+.btn-secondary-hero:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
 .btn {
     display: inline-block;
     background: var(--accent);
@@ -227,10 +242,24 @@ nav ul li a:hover:after {
     padding: 1rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .chat-header i {
     margin-right: 10px;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.chat-header button:hover {
+    color: var(--accent);
 }
 
 .chat-messages {
@@ -246,17 +275,36 @@ nav ul li a:hover:after {
     padding: 0.8rem;
     border-radius: 10px;
     max-width: 80%;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
 }
 
 .user-message {
     background: var(--secondary);
     color: white;
     margin-left: auto;
+    border-bottom-right-radius: 0;
 }
 
 .bot-message {
     background: #eaeaea;
     color: #333;
+    margin-right: auto;
+    border-bottom-left-radius: 0;
+}
+
+.message-icon {
+    font-size: 1.2rem;
+    padding-top: 5px;
+}
+
+.user-message .message-icon {
+    display: none;
+}
+
+.bot-message .message-icon i {
+    color: var(--primary);
 }
 
 .chat-input {
@@ -271,6 +319,7 @@ nav ul li a:hover:after {
     border: 1px solid #ddd;
     border-radius: 5px 0 0 5px;
     outline: none;
+    font-size: 1rem;
 }
 
 .chat-input button {
@@ -280,6 +329,11 @@ nav ul li a:hover:after {
     padding: 0 1.5rem;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    transition: background 0.3s;
+}
+
+.chat-input button:hover {
+    background: #c0392b;
 }
 
 .videos-section {
@@ -328,6 +382,17 @@ nav ul li a:hover:after {
 .video-content h3 {
     margin-bottom: 0.5rem;
     color: var(--primary);
+}
+
+.btn-tutorial-nav-header {
+    background: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn-tutorial-nav-header:hover {
+    background: #c0392b;
 }
 
 .contact-section {
@@ -484,4 +549,214 @@ footer {
     .section-title h2 {
         font-size: 2rem;
     }
+}
+
+/* Estilos específicos para la página de tutoriales */
+.tutoriales-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 5rem 0 2rem;
+    text-align: center;
+}
+.tutoriales-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+.tutoriales-header p {
+    font-size: 1.2rem;
+}
+.tutorial-container {
+    padding: 3rem 0;
+    margin: 0 auto;
+}
+.tutorial-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background: var(--primary);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.card-header i {
+    font-size: 1.8rem;
+    color: var(--accent);
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content p {
+    margin-bottom: 1rem;
+}
+
+.tutorial-details {
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.tutorial-details summary {
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--secondary);
+}
+
+.tutorial-details summary i {
+    transition: transform 0.3s;
+}
+
+.tutorial-details[open] summary i {
+    transform: rotate(180deg);
+}
+
+.details-content {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f8f8;
+    border-radius: 5px;
+}
+
+.details-content h4 {
+    color: var(--primary);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 0.5rem;
+}
+
+.tutorial-category-title {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: var(--accent);
+    border-bottom: 3px solid var(--secondary);
+    padding-bottom: 0.5rem;
+}
+
+.tutorial-category-title i {
+    margin-right: 10px;
+}
+
+.tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+/* Navegación de Categorías */
+.tutorial-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    background: var(--light);
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.btn-tutorial-nav {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--secondary);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-tutorial-nav:hover {
+    background: var(--primary);
+    transform: translateY(-2px);
+}
+
+.btn-tutorial-nav i {
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    .tutorial-nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .btn-tutorial-nav {
+        text-align: center;
+    }
+}.tutorial-card h2 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    display: none; /* Ocultar el h2 original ya que usamos h3 en la tarjeta */
+}
+.materiales-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+.materiales-list li {
+    background: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    border-left: 3px solid var(--secondary);
+}
+.pasos-list {
+    counter-reset: step-counter;
+    list-style: none;
+    padding: 0;
+}
+.pasos-list li {
+    margin-bottom: 1.5rem;
+    padding-left: 3.5rem; /* Ajustar padding para el nuevo tamaño del círculo */
+    position: relative;
+    line-height: 1.6;
+}
+.pasos-list li:before {
+    content: counter(step-counter); /* Solo el número */
+    counter-increment: step-counter;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--accent);
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.pasos-list li strong {
+    color: var(--primary);
 }
