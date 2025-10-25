@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TecnoSolutions - Asesoría y Mantenimiento de Dispositivos (Laptops, Celulares, Consolas)</title>
+    <title>TecnoSolutions - Tutoriales de Mantenimiento</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -16,206 +16,169 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="tutoriales.html" class="btn-tutorial-nav-header">Tutoriales</a></li>
-                    <li><a href="#soporte">Soporte IA</a></li>
-                    <li><a href="#videos">Videos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                    <li><a href="index.html#soporte">Soporte IA</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="container hero-content">
-            <h1>Soluciones profesionales para tus dispositivos</h1>
-            <p>Ofrecemos asesoría especializada y soluciones de mantenimiento para <strong>laptops, PCs, celulares y consolas de videojuegos</strong>. ¡Mantén tus dispositivos en perfecto estado!</p>
-            <a href="#servicios" class="btn">Nuestros Servicios</a>
-            <a href="tutoriales.html" class="btn btn-secondary-hero">Ver Tutoriales</a>
-        </div>
-    </section>
-
-    <section id="servicios" class="services">
+    <section class="tutoriales-header">
         <div class="container">
-            <div class="section-title">
-                <h2>Nuestros Servicios</h2>
-                <p>Brindamos soluciones integrales para el mantenimiento y reparación de tus dispositivos</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card" onclick="scrollToSection('mantenimiento')">
-                    <div class="service-img">
-                        <i class="fas fa-tools fa-3x"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Mantenimiento Preventivo</h3>
-                        <p>Limpieza interna y externa, optimización de software y más para alargar la vida útil de tus dispositivos (laptops, celulares, consolas).</p>
-                    </div>
-                </div>
-                <div class="service-card" onclick="scrollToSection('virus')">
-                    <div class="service-img">
-                        <i class="fas fa-bug fa-3x"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Eliminación de Virus</h3>
-                        <p>Limpieza de malware, spyware y virus. Protección con antivirus especializados y asesoría para navegación segura.</p>
-                    </div>
-                </div>
-                <div class="service-card" onclick="scrollToSection('actualizacion')">
-                    <div class="service-img">
-                        <i class="fas fa-cogs fa-3x"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Actualización de Hardware/Software</h3>
-                        <p>Asesoría en actualización de componentes, instalación de discos duros, memoria RAM, tarjetas gráficas y más.</p>
-                    </div>
-                </div>
-            </div>
+            <h1>Tutoriales de Mantenimiento Paso a Paso</h1>
+            <p>Aprende a mantener y limpiar tus dispositivos con nuestras guías detalladas. ¡Haz clic en una categoría para ver los tutoriales!</p>
         </div>
     </section>
 
-    <section id="soporte" class="ai-section">
-        <div class="container ai-container">
-            <div class="section-title">
-                <h2>Soporte con Inteligencia Artificial</h2>
-                <p>Nuestro asistente virtual está aquí para ayudarte con tus problemas técnicos</p>
-            </div>
-            <div class="chat-container">
-                <div class="chat-header">
-                    <i class="fas fa-robot"></i>
-                    <span>Asistente Virtual TecnoSolutions</span>
-                    <button id="clear-chat-btn" title="Limpiar Conversación"><i class="fas fa-redo-alt"></i></button>
-                </div>
-                <div class="chat-messages">
-                    <div class="message bot-message">
-                        <div class="message-icon"><i class="fas fa-robot"></i></div>
-                        <div class="message-content">
-                            ¡Hola! Soy tu asistente virtual de TecnoSolutions. Estoy aquí para ayudarte con problemas de mantenimiento y optimización de tus dispositivos. ¿En qué puedo ayudarte hoy?
-                        </div>
-                    </div>
-                </div>
-                <div class="chat-input">
-                    <input type="text" id="chat-input-field" placeholder="Escribe tu problema o pregunta aquí..." autocomplete="off">
-                    <button id="send-chat-btn" title="Enviar Mensaje"><i class="fas fa-paper-plane"></i></button>
-                </div>
-        </div>
-    </section>
-
-    <section id="videos" class="videos-section">
+    <section class="tutorial-container">
         <div class="container">
-            <div class="section-title">
-                <h2>Video Tutoriales</h2>
-                <p>Aprende a resolver problemas comunes con nuestros tutoriales paso a paso. Visita nuestra sección completa de Tutoriales para más guías.</p>
+            
+            <!-- Menú de navegación de categorías (Nuevo) -->
+            <div class="tutorial-nav">
+                <a href="#laptop-tutorials" class="btn-tutorial-nav"><i class="fas fa-laptop"></i> Laptops</a>
+                <a href="#smartphone-tutorials" class="btn-tutorial-nav"><i class="fas fa-mobile-alt"></i> Smartphones</a>
+                <a href="#console-tutorials" class="btn-tutorial-nav"><i class="fas fa-gamepad"></i> Consolas</a>
             </div>
-            <div class="video-grid">
-                <div class="video-card">
-                    <div class="video-container">
-                        <!-- Video de Ejemplo 1 -->
-                        <iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-content">
-                        <h3>Limpieza interna de laptop</h3>
-                        <p>Aprende a limpiar el interior de tu laptop de forma segura sin dañar los componentes.</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-container">
-                        <!-- Video de Ejemplo 2 -->
-                        <iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-content">
-                        <h3>Optimización de Windows 10/11</h3>
-                        <p>Configuración paso a paso para mejorar el rendimiento de tu sistema operativo.</p>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-container">
-                        <!-- Video de Ejemplo 3 -->
-                        <iframe src="https://www.youtube.com/embed/jW2XI2Y2RSY" allowfullscreen></iframe>
-                    </div>
-                    <div class="video-content">
-                        <h3>Eliminación de malware</h3>
-                        <p>Aprende a identificar y eliminar software malicioso de tu equipo.</p>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="tutoriales.html" class="btn">Ver Todos los Tutoriales</a>
-            </div>
-        </div>
-    </section>
 
-    <section id="contacto" class="contact-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contacto</h2>
-                <p>¿Necesitas ayuda especializada? Contáctanos para agendar una cita</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Ubicación</h3>
-                            <p>Av. Tecnología #123, Ciudad Digital</p>
-                        </div>
+            <!-- Sección de Tutoriales de Laptops -->
+            <h2 id="laptop-tutorials" class="tutorial-category-title"><i class="fas fa-laptop-code"></i> Tutoriales para Laptops y PC</h2>
+            <div class="tutorial-grid">
+                <!-- Tutorial 1: Limpieza de una Laptop -->
+                <div class="tutorial-card">
+                    <div class="card-header">
+                        <h3>Limpieza Profunda de Laptop (Interna y Externa)</h3>
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>+1 234 567 8900</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>soporte@tecnosolutions.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Horario de Atención</h3>
-                            <p>Lunes a Viernes: 9:00 am - 6:00 pm<br>Sábados: 10:00 am - 2:00 pm</p>
-                        </div>
+                    <div class="card-content">
+                        <p>Guía detallada para limpiar tu laptop, incluyendo el reemplazo de pasta térmica.</p>
+                        <details class="tutorial-details">
+                            <summary>Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></summary>
+                            <div class="details-content">
+                                <h4>Materiales Necesarios</h4>
+                                <ul class="materiales-list">
+                                    <li>Aire comprimido (especial para electrónica)</li>
+                                    <li>Alcohol isopropílico (90% o superior)</li>
+                                    <li>Paños de microfibra o toallas de papel sin pelusa</li>
+                                    <li>Destornilladores de precisión (Phillips y planos)</li>
+                                    <li>Pasta térmica de calidad (si se va a reemplazar)</li>
+                                    <li>Hisopos de algodón</li>
+                                    <li>Brocha antiestática suave</li>
+                                </ul>
+                                
+                                <h4>Pasos a Seguir</h4>
+                                <ol class="pasos-list">
+                                    <li>**Preparación y Seguridad:** Apaga la laptop, desconecta el cargador y retira la batería (si es extraíble). Colócate en una superficie limpia y bien iluminada.</li>
+                                    <li>**Limpieza Externa:** Usa un paño de microfibra humedecido con alcohol isopropílico para limpiar la carcasa, el teclado y el trackpad. Utiliza aire comprimido para desalojar el polvo entre las teclas.</li>
+                                    <li>**Acceso a Componentes (Interna):** Retira los tornillos de la cubierta inferior con cuidado. Identifica y desconecta los cables de la batería, ventiladores y otros componentes si es necesario para el acceso.</li>
+                                    <li>**Limpieza de Ventiladores y Disipadores:** Usa aire comprimido en ráfagas cortas para limpiar el polvo de los ventiladores y las rejillas del disipador de calor. Sostén las aspas del ventilador para evitar que giren mientras aplicas el aire.</li>
+                                    <li>**Reemplazo de Pasta Térmica (Opcional):** Si la laptop tiene más de dos años o presenta problemas de temperatura, retira el disipador de calor. Limpia la pasta térmica vieja del CPU/GPU con alcohol isopropílico y aplica una pequeña cantidad de pasta nueva (método del grano de arroz o X).</li>
+                                    <li>**Reensamblaje:** Vuelve a conectar los componentes, coloca la cubierta inferior y atornilla cuidadosamente. Asegúrate de que no queden tornillos sobrantes y que todos los cables estén conectados.</li>
+                                    <li>**Prueba Final:** Enciende la laptop y verifica que los ventiladores funcionen correctamente y que la temperatura del sistema sea estable.</li>
+                                </ol>
+                            </div>
+                        </details>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <h3>Envíanos un mensaje</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Nombre completo *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo electrónico *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Servicio de interés</label>
-                            <select id="service" name="service">
-                                <option value="">Selecciona un servicio</option>
-                                <option value="mantenimiento">Mantenimiento Preventivo</option>
-                                <option value="virus">Eliminación de Virus</option>
-                                <option value="actualizacion">Actualización de Hardware/Software</option>
-                                <option value="otros">Otros servicios</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Mensaje *</label>
-                            <textarea id="message" name="message" required></textarea>
-                        </div>
-                        <div class="form-group checkbox-group">
-                            <input type="checkbox" id="data-auth" name="data-auth" required>
-                            <label for="data-auth">Autorizo el tratamiento de mis datos personales. *</label>
-                        </div>
-                        <button type="submit" class="btn">Enviar Mensaje</button>
-                    </form>
-                    <div id="formMessage" class="form-message"></div>
+                
+                <!-- Tutorial Adicional (Ejemplo) -->
+                <div class="tutorial-card">
+                    <div class="card-header">
+                        <h3>Optimización de Windows 10/11 para Mejor Rendimiento</h3>
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Configuración esencial para que tu sistema operativo funcione a la máxima velocidad.</p>
+                        <details class="tutorial-details">
+                            <summary>Ver Pasos de Optimización <i class="fas fa-chevron-down"></i></summary>
+                            <div class="details-content">
+                                <h4>Pasos a Seguir</h4>
+                                <ol class="pasos-list">
+                                    <li>**Desinstalar Programas Innecesarios:** Ve a 'Agregar o quitar programas' y elimina el software que ya no utilizas.</li>
+                                    <li>**Limpieza de Archivos Temporales:** Usa la herramienta 'Liberador de espacio en disco' de Windows o un software de terceros para eliminar archivos basura.</li>
+                                    <li>**Desactivar Programas de Inicio:** Abre el 'Administrador de Tareas' (Ctrl+Shift+Esc), ve a la pestaña 'Inicio' y deshabilita los programas que no necesitas que se ejecuten al encender la PC.</li>
+                                    <li>**Desfragmentar o Optimizar Disco:** Si usas un HDD, desfragmenta el disco. Si usas un SSD, asegúrate de que la optimización esté activada.</li>
+                                    <li>**Actualizar Drivers:** Usa el 'Administrador de Dispositivos' o el software del fabricante para mantener todos los controladores al día.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
                 </div>
             </div>
+
+            <!-- Sección de Tutoriales de Smartphones -->
+            <h2 id="smartphone-tutorials" class="tutorial-category-title"><i class="fas fa-mobile-alt"></i> Tutoriales para Smartphones</h2>
+            <div class="tutorial-grid">
+                <!-- Tutorial 2: Limpieza de un Smartphone -->
+                <div class="tutorial-card">
+                    <div class="card-header">
+                        <h3>Limpieza y Desinfección de Smartphone</h3>
+                        <i class="fas fa-spray-can"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Mantén tu teléfono libre de gérmenes y suciedad, especialmente en los puertos.</p>
+                        <details class="tutorial-details">
+                            <summary>Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></summary>
+                            <div class="details-content">
+                                <h4>Materiales Necesarios</h4>
+                                <ul class="materiales-list">
+                                    <li>Paño de microfibra suave</li>
+                                    <li>Solución desinfectante a base de alcohol isopropílico (70% recomendado) o toallitas desinfectantes para electrónica</li>
+                                    <li>Hisopos de algodón o palillos de dientes (para puertos)</li>
+                                </ul>
+                                
+                                <h4>Pasos a Seguir</h4>
+                                <ol class="pasos-list">
+                                    <li>**Preparación:** Apaga el teléfono y desconecta cualquier cable. Retira la funda y el protector de pantalla (si es posible).</li>
+                                    <li>**Limpieza de Pantalla y Carcasa:** Limpia suavemente la pantalla y la parte trasera con el paño de microfibra. Si usas una solución desinfectante, rocía el paño (no directamente el teléfono) y limpia con movimientos circulares.</li>
+                                    <li>**Puertos y Altavoces:** Con un hisopo de algodón o un palillo de dientes envuelto en un paño muy fino, limpia con mucho cuidado los puertos de carga, los altavoces y el micrófono para remover pelusa y suciedad. **No introduzcas objetos metálicos ni apliques presión excesiva.**</li>
+                                    <li>**Desinfección:** Utiliza una toallita desinfectante o el paño con alcohol isopropílico para desinfectar las superficies que más tocas. Evita que el líquido entre en los puertos.</li>
+                                    <li>**Secado y Reensamblaje:** Deja que el teléfono se seque completamente al aire. Limpia la funda y el protector de pantalla antes de volver a colocarlos.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Tutoriales de Consolas -->
+            <h2 id="console-tutorials" class="tutorial-category-title"><i class="fas fa-gamepad"></i> Tutoriales para Consolas de Videojuegos</h2>
+            <div class="tutorial-grid">
+                <!-- Tutorial 3: Limpieza de una Consola de Videojuegos -->
+                <div class="tutorial-card">
+                    <div class="card-header">
+                        <h3>Limpieza General de Consola de Videojuegos</h3>
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <div class="card-content">
+                        <p>Asegura una ventilación óptima para evitar el sobrecalentamiento de tu consola.</p>
+                        <details class="tutorial-details">
+                            <summary>Ver Materiales y Pasos <i class="fas fa-chevron-down"></i></summary>
+                            <div class="details-content">
+                                <h4>Materiales Necesarios</h4>
+                                <ul class="materiales-list">
+                                    <li>Aire comprimido</li>
+                                    <li>Paño de microfibra</li>
+                                    <li>Hisopos de algodón</li>
+                                    <li>Brocha suave</li>
+                                </ul>
+                                
+                                <h4>Pasos a Seguir</h4>
+                                <ol class="pasos-list">
+                                    <li>**Desconexión:** Apaga y desconecta completamente la consola de la corriente y de la TV.</li>
+                                    <li>**Limpieza Exterior:** Humedece ligeramente un paño de microfibra con agua (o una solución de agua y alcohol isopropílico al 50%) y limpia la carcasa de la consola.</li>
+                                    <li>**Ventilaciones:** Usa la brocha suave y el aire comprimido para limpiar las rejillas de ventilación. Asegúrate de que no entre polvo en la consola.</li>
+                                    <li>**Puertos:** Utiliza los hisopos de algodón para limpiar los puertos USB, HDMI, etc.</li>
+                                    <li>**Secado:** Deja que la consola se seque completamente antes de volver a conectarla.</li>
+                                </ol>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -230,11 +193,11 @@
             <div class="footer-links">
                 <h4>Navegación</h4>
                 <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="tutoriales.html" class="btn-tutorial-nav-header">Tutoriales</a></li>
-                    <li><a href="#soporte">Soporte IA</a></li>
-                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="tutoriales.html">Tutoriales</a></li>
+                    <li><a href="index.html#soporte">Soporte IA</a></li>
+                    <li><a href="index.html#videos">Videos</a></li>
                 </ul>
             </div>
             <div class="footer-links">

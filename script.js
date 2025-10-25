@@ -106,9 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
+        const dataAuth = document.getElementById('data-auth').checked;
         
         if (!name || !email || !message) {
             showFormMessage('Por favor, completa todos los campos obligatorios.', 'error');
+            return;
+        }
+
+        if (!dataAuth) {
+            showFormMessage('Debes autorizar el tratamiento de tus datos personales.', 'error');
             return;
         }
         
@@ -127,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('Email:', email);
         console.log('Servicio:', document.getElementById('service').value);
         console.log('Mensaje:', message);
+        console.log('Autorización de Datos:', dataAuth ? 'Sí' : 'No');
     });
     
     function showFormMessage(text, type) {
